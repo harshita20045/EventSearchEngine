@@ -1,0 +1,26 @@
+/* 🔹 Role Selection Dropdown */
+.role-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* 🔹 Improve Login Button */
+.btn-auth {
+  background: linear-gradient(to right, #4CAF50, #2E7D32);
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.btn-auth:hover {
+  background: linear-gradient(to right, #2E7D32, #1B5E20);
+}

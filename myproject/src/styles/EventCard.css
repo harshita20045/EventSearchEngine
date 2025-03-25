@@ -1,0 +1,62 @@
+/* 🎟️ Event Card Container */
+.event-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 🎟️ Event Image */
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 📄 Event Details */
+.event-details h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.event-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* 🎟️ View/ Register Button */
+.btn-view {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-view:hover {
+  background-color: #357abd;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .event-card {
+    padding: 15px;
+  }
+}

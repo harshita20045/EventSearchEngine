@@ -1,0 +1,112 @@
+/* ✅ Admin Dashboard Container */
+.admin-dashboard {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* 📌 Dashboard Title */
+.admin-dashboard h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ➕ Add Event Button */
+.btn-add-event {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.btn-add-event:hover {
+  background-color: #388e3c;
+}
+
+/* 🎟️ Event List Grid */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* 🎟️ Event Card */
+.event-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🎟️ Event Image */
+.event-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 📝 Event Title */
+.event-card h3 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+  color: #1e3c60;
+}
+
+/* ✅ Button Group */
+.btn-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ✏ Edit & 🗑 Delete Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #ff5e62;
+  color: white;
+}
+
+/* ✏ Edit Hover */
+.edit-btn:hover {
+  background-color: #ffa000;
+}
+
+/* 🗑 Delete Hover */
+.delete-btn:hover {
+  background-color: #e54b4f;
+}
+
+/* ⚠️ No Events Message */
+.no-events {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-top: 20px;
+}

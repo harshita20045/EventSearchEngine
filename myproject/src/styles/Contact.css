@@ -1,0 +1,133 @@
+/* ✅ Contact Page Main Container */
+.contact-container {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ✅ Contact Header */
+.contact-header {
+  background: linear-gradient(to right, #1e3c60, #234a71);
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ✅ Contact Content Layout */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Contact Info Section */
+.contact-info {
+  background: #f8f9fa;
+  padding: 25px;
+  flex: 1;
+  min-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #234a71;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.contact-info p a {
+  color: #ff5e62;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info p a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+/* ✅ Contact Form */
+.contact-form {
+  background: white;
+  padding: 30px;
+  flex: 1;
+  min-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #234a71;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* ✅ Form Fields */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* ✅ Submit Button */
+.contact-form button {
+  background: #ff5e62;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #e74c3c;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}

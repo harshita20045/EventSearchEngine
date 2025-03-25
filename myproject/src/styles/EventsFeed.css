@@ -1,0 +1,134 @@
+/* 🎟️ Events Feed Container */
+.events-feed-container {
+  padding: 40px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+/* 📝 Section Title */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #1e3c60;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* 📝 No Events Found */
+.no-events {
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+
+/* 📢 New Event Notification */
+.notification {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 🔍 Search Input */
+.search-input {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* 📅 Event List - Grid Layout */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📅 Event Card */
+.event-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 📸 Event Image */
+.event-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 📄 Event Details */
+.event-details h3 {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-top: 12px;
+}
+
+.event-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 6px 0;
+}
+
+/* 🔗 Register Button */
+.btn-register {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 12px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-register:hover {
+  background-color: #357abd;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .search-input {
+    width: 90%;
+  }
+}
+
+/* 🔥 Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

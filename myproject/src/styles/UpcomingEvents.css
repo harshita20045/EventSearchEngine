@@ -1,0 +1,125 @@
+/* 🎟️ UPCOMING EVENTS SECTION */
+.upcoming-events {
+  text-align: center;
+  padding: 00px 40px; /* Increased Padding */
+  background: linear-gradient(to right, #2196f3, #0d47a1); /* ✅ Matching Theme */
+  color: white;
+  margin-top: 50px; /* Added Margin to Create Space Below Banner */
+}
+
+/* 🎯 HEADER STYLING */
+.upcoming-events h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffeb3b; /* Bright Yellow Highlight */
+  margin-bottom: 50px; /* Increased Margin for Better Spacing */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* 🎟️ EVENT GRID */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 🎟️ EVENT CARD DESIGN */
+.event-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ EVENT ICON */
+.event-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* 🎟️ CARD TITLE */
+.event-card h3 {
+  font-size: 1.8rem;
+  color: #ff5e62;
+  margin-bottom: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🎯 EVENT DATE & LOCATION */
+.event-date,
+.event-location {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* 🎟️ BUTTON STYLING */
+.event-btn {
+  background: #ff5e62;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 12px;
+}
+
+/* 🟡 BUTTON HOVER */
+.event-btn:hover {
+  background: #ffcc29;
+  color: #0d47a1;
+}
+
+/* 🎉 HOVER EFFECTS */
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.event-card:hover h3 {
+  color: #ffcc29;
+}
+
+/* ✨ GLOWING BORDER ON HOVER */
+.event-card:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 94, 98, 0.8);
+  z-index: -1;
+}
+
+/* 🎯 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .event-card {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .upcoming-events h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .upcoming-events {
+    padding: 80px 20px; /* Slightly Reduced Padding on Mobile */
+    margin-top: 30px; /* Adjusted for Mobile */
+  }
+}

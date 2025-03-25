@@ -1,0 +1,155 @@
+/* 🎟️ NAVBAR CONTAINER */
+.custom-navbar {
+  background: linear-gradient(to right, #2196f3, #0d47a1);
+  padding: 16px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 🎟️ BODY PADDING TO AVOID NAVBAR OVERLAP */
+body {
+  padding-top: 80px;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* 🎟️ NAVBAR LINKS */
+.custom-navbar a,
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+/* ✨ HOVER EFFECT FOR NAV LINKS */
+.custom-navbar .nav-link:hover {
+  color: #ffeb3b !important;
+  transform: scale(1.08);
+}
+
+/* 🔎 SEARCH BAR CONTAINER */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+}
+
+/* 🔎 SEARCH INPUT */
+.search-bar input {
+  width: 260px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s;
+}
+
+/* ✨ FOCUS EFFECT */
+.search-bar input:focus {
+  border-color: #42a5f5;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* 🔥 SEARCH BUTTON */
+.search-bar button {
+  background: #ffeb3b;
+  color: #333;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* 🔥 BUTTON HOVER EFFECT */
+.search-bar button:hover {
+  background: #ffc107;
+  transform: translateY(-2px);
+}
+
+/* 🧑 PROFILE BUTTON */
+.profile-btn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-left: 12px;
+  transition: background 0.3s, transform 0.3s;
+  position: relative; /* Ensures proper dropdown alignment */
+}
+
+/* 🌟 HOVER EFFECT FOR PROFILE BUTTON */
+.profile-btn:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+/* 🎨 LOGIN & REGISTER BUTTONS */
+.btn-login,
+.btn-register {
+  padding: 10px 16px;
+  margin-left: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-login {
+  background: #673ab7;
+  color: #fff;
+}
+
+.btn-register {
+  background: #e91e63;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background: #512da8;
+}
+
+.btn-register:hover {
+  background: #c2185b;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .search-bar input {
+    width: 180px;
+    padding: 8px 12px;
+  }
+
+  .search-bar button {
+    padding: 8px 12px;
+  }
+
+  .btn-login,
+  .btn-register,
+  .profile-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}

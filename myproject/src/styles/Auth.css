@@ -1,0 +1,109 @@
+/* ✅ Register/Login Page Styling */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #2c3e50, #34495e); /* Consistent Background */
+}
+
+/* ✅ Auth Box - Central Card */
+.auth-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 360px;
+}
+
+/* ✅ Role Selector Styling */
+.role-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.role-selector label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.role-selector input {
+  margin-right: 5px;
+}
+
+/* ✅ Input Fields */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Focus Effect for Input Fields */
+.auth-box input:focus {
+  border-color: #ff5e62;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 94, 98, 0.5);
+}
+
+/* ✅ Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* ✅ Buttons - Auth Submit */
+.btn-auth {
+  background: #ff5e62;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effect for Button */
+.btn-auth:hover {
+  background: #e74c3c;
+}
+
+/* ✅ Link for Already Have Account */
+.auth-box p {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.auth-box p a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-box p a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .auth-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .btn-auth {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}

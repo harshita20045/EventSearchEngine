@@ -1,0 +1,75 @@
+/* 📄 Profile Container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #2196f3, #0d47a1);
+}
+
+/* 🎨 Profile Card */
+.profile-card {
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* 🎯 Profile Heading */
+.profile-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* 📄 Profile Info */
+.profile-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* ✨ Edit & Logout Buttons */
+.profile-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ✅ Edit Button */
+.btn-edit {
+  background: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* ✅ Logout Button */
+.btn-logout {
+  background: #e74c3c;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* 🔥 Button Hover Effects */
+.btn-edit:hover {
+  background: #45a049;
+}
+.btn-logout:hover {
+  background: #c0392b;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 90%;
+  }
+}

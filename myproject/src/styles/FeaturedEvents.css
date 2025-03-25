@@ -1,0 +1,89 @@
+/* 🌟 FEATURED EVENTS SECTION */
+.featured-events {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #1a1a2e, #23395d); /* 🔥 Match Navbar Gradient */
+  color: white;
+}
+
+/* 🌟 HEADER STYLING */
+.featured-events h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+}
+
+/* 🌟 EVENT CARD GRID */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 🌟 EVENT CARD DESIGN */
+.event-card {
+  background: rgba(255, 255, 255, 0.9); /* 🔥 Glassmorphism Effect */
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌟 CARD TITLE */
+.event-card h3 {
+  font-size: 2rem;
+  color: #ff5e62; /* 🔥 Accent Color */
+  margin-bottom: 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🌟 CARD DESCRIPTION */
+.event-card p {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 🌟 HOVER EFFECTS */
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.event-card:hover h3 {
+  color: #ffcc29; /* 🔥 Change Text Color on Hover */
+}
+
+/* 🌟 GLOWING BORDER ON HOVER */
+.event-card:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px rgba(255, 94, 98, 0.8);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
