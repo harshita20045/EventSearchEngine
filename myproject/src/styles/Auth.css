@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #2c3e50, #34495e); /* Consistent Background */
+  background: linear-gradient(to right, #a8e6cf, #333); /* Light Green to Charcoal Black Background */
 }
 
 /* ✅ Auth Box - Central Card */
@@ -27,7 +27,7 @@
 
 .role-selector label {
   font-size: 1rem;
-  color: #333;
+  color: #333; /* Charcoal Black */
   font-weight: bold;
   cursor: pointer;
 }
@@ -41,7 +41,7 @@
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #333; /* Charcoal Black */
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
@@ -49,21 +49,21 @@
 
 /* ✅ Focus Effect for Input Fields */
 .auth-box input:focus {
-  border-color: #ff5e62;
+  border-color: #a8e6cf; /* Light Green */
   outline: none;
-  box-shadow: 0 0 8px rgba(255, 94, 98, 0.5);
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Light Green shadow */
 }
 
 /* ✅ Error Message */
 .error-message {
-  color: #e74c3c;
+  color: #e74c3c; /* Retaining the original error color */
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
 /* ✅ Buttons - Auth Submit */
 .btn-auth {
-  background: #ff5e62;
+  background: #333; /* Charcoal Black */
   color: white;
   border: none;
   padding: 12px;
@@ -76,7 +76,7 @@
 
 /* ✅ Hover Effect for Button */
 .btn-auth:hover {
-  background: #e74c3c;
+  background: #555; /* Darker Charcoal on hover */
 }
 
 /* ✅ Link for Already Have Account */
@@ -86,7 +86,7 @@
 }
 
 .auth-box p a {
-  color: #3498db;
+  color: #3498db; /* Retaining the original link color */
   text-decoration: none;
   font-weight: bold;
 }

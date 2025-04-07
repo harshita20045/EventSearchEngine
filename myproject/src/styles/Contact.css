@@ -1,4 +1,4 @@
-/* ✅ Contact Page Main Container */
+
 .contact-container {
   max-width: 1000px;
   margin: 80px auto;
@@ -6,9 +6,9 @@
   text-align: center;
 }
 
-/* ✅ Contact Header */
+
 .contact-header {
-  background: linear-gradient(to right, #1e3c60, #234a71);
+  background: linear-gradient(to right, #a8e6cf, #333); /* Light Green to Charcoal Black Gradient */
   color: white;
   padding: 50px;
   border-radius: 10px;
@@ -21,7 +21,7 @@
   margin-bottom: 10px;
 }
 
-/* ✅ Contact Content Layout */
+
 .contact-content {
   display: flex;
   justify-content: space-between;
@@ -30,9 +30,8 @@
   flex-wrap: wrap;
 }
 
-/* ✅ Contact Info Section */
 .contact-info {
-  background: #f8f9fa;
+  background: #f8f9fa; 
   padding: 25px;
   flex: 1;
   min-width: 300px;
@@ -41,7 +40,7 @@
 }
 
 .contact-info h2 {
-  color: #234a71;
+  color: #333; 
   font-size: 2rem;
   margin-bottom: 15px;
 }
@@ -53,13 +52,13 @@
 }
 
 .contact-info p a {
-  color: #ff5e62;
+  color: #a8e6cf;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact-info p a:hover {
-  color: #e74c3c;
+  color: #76c7a8; 
   text-decoration: underline;
 }
 
@@ -74,12 +73,12 @@
 }
 
 .contact-form h2 {
-  color: #234a71;
+  color: #333; 
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-/* ✅ Form Fields */
+
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -90,7 +89,7 @@
 .contact-form textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #333; 
   border-radius: 5px;
   font-size: 1rem;
 }
@@ -99,9 +98,9 @@
   resize: none;
 }
 
-/* ✅ Submit Button */
+
 .contact-form button {
-  background: #ff5e62;
+  background: #333;
   color: white;
   padding: 12px;
   border: none;
@@ -112,10 +111,10 @@
 }
 
 .contact-form button:hover {
-  background: #e74c3c;
+  background: #555; 
 }
 
-/* ✅ Responsive Design */
+
 @media (max-width: 768px) {
   .contact-header h1 {
     font-size: 2.2rem;

@@ -3,14 +3,15 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #333; /* Charcoal Black */
   border-radius: 5px;
   font-size: 1rem;
+  background: #a8e6cf; /* Light Green background */
 }
 
 /* 🔹 Improve Login Button */
 .btn-auth {
-  background: linear-gradient(to right, #4CAF50, #2E7D32);
+  background: #333; /* Charcoal Black */
   color: white;
   border: none;
   padding: 12px;
@@ -22,5 +23,5 @@
 }
 
 .btn-auth:hover {
-  background: linear-gradient(to right, #2E7D32, #1B5E20);
+  background: #555; /* Darker Charcoal on hover */
 }

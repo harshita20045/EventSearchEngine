@@ -8,21 +8,22 @@
   width: 220px;
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #333; /* Charcoal Black */
   font-size: 1rem;
   transition: border 0.3s ease-in-out;
+  background: #a8e6cf; /* Light Green background */
 }
 
 .search-bar input:focus {
-  border: 1px solid #ff5e62;
+  border: 1px solid #a8e6cf; /* Light Green on focus */
   outline: none;
 }
 
 .search-bar button {
   padding: 8px 12px;
   border-radius: 5px;
-  background-color: white;
-  color: #ff5e62;
+  background-color: #333; /* Charcoal Black */
+  color: white;
   border: none;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
@@ -30,6 +31,6 @@
 }
 
 .search-bar button:hover {
-  background-color: #ff5e62;
+  background-color: #555; /* Darker Charcoal on hover */
   color: white;
 }
