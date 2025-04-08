@@ -19,7 +19,7 @@ export default function Home() {
       name: "💻 Tech Conference",
       description: "Networking event for developers & startups.",
       date: "April 5, 2025",
-      location: "Bangalore, India",
+      location: "Vijaynagar, India",
       image: require("../assets/Slide1.png"),
     },
   ]);

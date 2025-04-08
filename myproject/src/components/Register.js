@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../styles/Auth.css";
+
 
 export default function Register() {
   const [fullName, setFullName] = useState("");
@@ -12,23 +14,29 @@ export default function Register() {
   const navigate = useNavigate();
 
   // ✅ Handle Registration
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    setError(""); // Reset error before checking
+    setError("");
 
     if (password !== confirmPassword) {
       setError("⚠ Passwords do not match!");
       return;
     }
 
-    // ✅ Store Credentials for Testing
-    localStorage.setItem("fullName", fullName);
-    localStorage.setItem("email", email);
-    localStorage.setItem("role", role);
-    localStorage.setItem("password", password);
-
-    alert("✅ Registration successful! Please login.");
-    navigate("/login");
+    try {
+      const res = await axios.post("http://localhost:3001/user/save", {
+        name: fullName,
+        email,
+        password,
+        role,
+      });
+      if (res.data.status) {
+        alert("✅ Registration successful! Please login.");
+        navigate("/login");
+      }
+    } catch (error) {
+      setError("❌ Registration failed. Email might be taken.");
+    }
   };
 
   return (

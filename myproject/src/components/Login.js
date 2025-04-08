@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../styles/Auth.css";
 
 export default function Login() {
@@ -10,7 +11,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   // ✅ Handle Login
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError(""); // Reset error before checking
 
@@ -21,18 +22,23 @@ export default function Login() {
     }
 
     // ✅ Fixed Test Credentials
-    if (
-      (role === "user" && email === "user@gmail.com" && password === "123") ||
-      (role === "organizer" && email === "organizer@gmail.com" && password === "123")
-    ) {
-      localStorage.setItem("role", role);
-      localStorage.setItem("isLoggedIn", "true");
+    try {
+      const res = await axios.post("http://localhost:3001/user/login", { email, password, role });
 
-      // ✅ Redirect to Relevant Dashboard
-      if (role === "user") navigate("/home");
-      else if (role === "organizer") navigate("/organizer");
-    } else {
-      setError("❌ Invalid credentials! Please try again.");
+      if (res.data.token) {
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("role", role);
+        alert("✅ Login successful!");
+
+        // ✅ Role-wise redirection
+        if (role === "user") navigate("/home");
+        else if (role === "organizer") navigate("/organizer");
+        else if (role === "admin") navigate("/admin-dashboard"); // Just in case
+      } else {
+        setError("❌ Invalid credentials! Please try again.");
+      }
+    } catch (error) {
+      setError("❌ Login failed. Check your credentials.");
     }
   };
 

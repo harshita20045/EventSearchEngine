@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import "../../styles/AddEventO.css";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { createEvent, getEventById, updateEvent } from "../../api";
+import "../../styles/AddEvent.css";
 
 export default function AddEvent() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const eventId = queryParams.get("id");
 
-  // ✅ Event State
   const [event, setEvent] = useState({
-    title: "",
+    name: "",
     category: "",
     date: "",
     time: "",
@@ -16,65 +19,58 @@ export default function AddEvent() {
     image: "",
   });
 
-  // ✅ Handle Input Change
+  const [imagePreview, setImagePreview] = useState(null);
+
+  useEffect(() => {
+    if (eventId) {
+      getEventById(eventId).then((data) => {
+        setEvent(data);
+        setImagePreview(data.image);
+      }).catch((error) => console.error("Error fetching event:", error));
+    }
+  }, [eventId]);
+
   const handleChange = (e) => {
     setEvent({ ...event, [e.target.name]: e.target.value });
   };
 
-  // ✅ Handle Image Upload
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
+        setImagePreview(reader.result);
         setEvent({ ...event, image: reader.result });
       };
       reader.readAsDataURL(file);
     }
   };
 
-  // ✅ Handle Form Submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("📢 Submitting Event Data:", event);  // ✅ Debugging ke liye
 
-    // 🔥 Get Existing Events from Local Storage
-    let events = JSON.parse(localStorage.getItem("events")) || [];
+    try {
+      if (eventId) {
+        await updateEvent(eventId, event);
+        alert("✅ Event updated successfully!");
+      } else {
+        await createEvent(event);
+        alert("🎉 New Event Added Successfully!");
+      }
+      navigate("/admin");
+    } catch (error) {
+      console.error("Error saving event:", error);
+      alert("⚠ Error saving event.");
+    }
+};
 
-    // 🔥 Add New Event
-    events.push({ ...event, id: Date.now() });
-
-    // 🔥 Save Updated Events to Local Storage
-    localStorage.setItem("events", JSON.stringify(events));
-
-    alert(`✅ Event "${event.title}" added successfully!`);
-
-    // 🔥 Redirect to Organizer Dashboard
-    navigate("/organizer");
-
-    // Clear Form
-    setEvent({
-      title: "",
-      category: "",
-      date: "",
-      time: "",
-      location: "",
-      description: "",
-      image: "",
-    });
-  };
 
   return (
     <div className="add-event-container">
-      <h1>📅 Add a New Event</h1>
+      <h1>{eventId ? "✏ Edit Event" : "📅 Add New Event"}</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Event Title"
-          value={event.title}
-          onChange={handleChange}
-          required
-        />
+        <input type="text" name="title" placeholder="Event Name" value={event.title} onChange={handleChange} required />
         <select name="category" value={event.category} onChange={handleChange} required>
           <option value="">Select a Category</option>
           <option value="Music">🎵 Music</option>
@@ -84,27 +80,11 @@ export default function AddEvent() {
         </select>
         <input type="date" name="date" value={event.date} onChange={handleChange} required />
         <input type="time" name="time" value={event.time} onChange={handleChange} required />
-        <input
-          type="text"
-          name="location"
-          placeholder="Location"
-          value={event.location}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="description"
-          placeholder="Event Description"
-          value={event.description}
-          onChange={handleChange}
-          rows="3"
-          required
-        />
-        <input type="file" accept="image/*" onChange={handleImageUpload} required />
-        {event.image && <img src={event.image} alt="Event Preview" className="event-preview" />}
-        <button type="submit" className="btn-organizer">
-          ➕ Add Event
-        </button>
+        <input type="text" name="location" placeholder="Location" value={event.location} onChange={handleChange} required />
+        <textarea name="description" placeholder="Event Description" value={event.description} onChange={handleChange} rows="3" required />
+        <input type="file" accept="image/*" onChange={handleImageUpload} />
+        {imagePreview && <img src={imagePreview} alt="Event Preview" className="event-preview" />}
+        <button type="submit" className="btn-admin">{eventId ? "Update Event" : "Add Event"}</button>
       </form>
     </div>
   );
