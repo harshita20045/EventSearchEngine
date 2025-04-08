@@ -1,7 +1,7 @@
 /* ✅ Admin Dashboard Container */
 .admin-dashboard {
   padding: 20px;
-  background-color: #f9f9f9;
+  background: #ffffff; /* White background */
   min-height: 100vh;
 }
 
@@ -23,10 +23,12 @@
   cursor: pointer;
   margin-bottom: 20px;
   font-size: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-add-event:hover {
   background-color: #388e3c;
+  transform: scale(1.05);
 }
 
 /* 🎟️ Event List Grid */
@@ -38,31 +40,25 @@
 
 /* 🎟️ Event Card */
 .event-card {
-  background: white;
+  background: #f5f5f5; /* Light grey */
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s;
+  border: 2px solid #4caf50; /* Green border */
 }
 
 .event-card:hover {
   transform: translateY(-5px);
 }
 
-/* 🎟️ Event Image */
 .event-card img {
   width: 100%;
   height: 180px;
   border-radius: 8px;
   object-fit: cover;
-}
-
-/* 📝 Event Title */
-.event-card h3 {
-  margin: 10px 0;
-  font-size: 1.4rem;
-  color: #1e3c60;
+  border: 2px solid #4caf50; /* Green border around images */
 }
 
 /* ✅ Button Group */
@@ -81,6 +77,7 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .edit-btn {
@@ -96,11 +93,13 @@
 /* ✏ Edit Hover */
 .edit-btn:hover {
   background-color: #ffa000;
+  transform: scale(1.1);
 }
 
 /* 🗑 Delete Hover */
 .delete-btn:hover {
   background-color: #e54b4f;
+  transform: scale(1.1);
 }
 
 /* ⚠️ No Events Message */

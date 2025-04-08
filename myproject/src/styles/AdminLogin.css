@@ -1,6 +1,6 @@
 /* ✅ Admin Login Container */
 .admin-login {
-  background: linear-gradient(to bottom right, #f4f6f9, #e3f2fd);
+  background: linear-gradient(to bottom right, #a8e6cf, #333); /* Light Green to Charcoal Black Gradient */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
 /* ✅ Header */
 .admin-login h2 {
   text-align: center;
-  color: #3a5949;
+  color: #333; /* Charcoal Black */
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -41,7 +41,7 @@
 
 .form-group label {
   font-size: 1rem;
-  color: #555;
+  color: #333; /* Charcoal Black */
   margin-bottom: 8px;
   display: inline-block;
 }
@@ -51,7 +51,7 @@
   width: 100%;
   padding: 12px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #333; /* Charcoal Black */
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
@@ -60,20 +60,20 @@
 
 /* 🎯 Focus Effect */
 .form-group input:focus {
-  border-color: #4caf50;
+  border-color: #a8e6cf; /* Light Green */
   box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.3);
 }
 
 /* ⚠️ Error Message */
 .error {
-  color: #e74c3c;
+  color: #e74c3c; /* Retaining the original error color */
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
 
 /* 🚀 Login Button */
 .login-btn {
-  background: #4caf50;
+  background: #333; /* Charcoal Black */
   color: white;
   padding: 12px;
   width: 100%;
@@ -86,7 +86,7 @@
 
 /* ✨ Button Hover */
 .login-btn:hover {
-  background: #45a049;
+  background: #555; /* Darker Charcoal on hover */
 }
 
 /* 📱 Responsive Design */

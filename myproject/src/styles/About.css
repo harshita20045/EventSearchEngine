@@ -1,47 +1,85 @@
-/* ✅ About Page Main Container */
+
 .about-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 60px auto;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
+  background: #d3f9d8; 
+  border-radius: 20px;
+  box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.3); 
+  transition: all 0.3s ease-in-out;
 }
 
-/* ✅ About Page Header */
+.about-container:hover {
+  transform: scale(1.03);
+}
+
 .about-header {
-  background: linear-gradient(to right, #234a71, #1e3c60);
-  color: white;
-  padding: 40px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #a8e6cf, #f5f5dc); /* Light Green to Soft Beige Gradient */
+  padding: 65px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .about-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333; 
+  padding: 20px 45px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.4); 
+  border-radius: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* ✅ About Content Sections */
+.about-header p {
+  font-size: 1.6rem;
+  color: #333; 
+  margin-top: 20px;
+  font-weight: 600;
+}
+
 .about-content {
-  margin-top: 30px;
+  margin-top: 55px;
 }
 
 .about-section {
-  background: #f8f9fa;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #a8e6cf; 
+  padding: 45px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.3);
+  border-left: 10px solid #333; 
+  transition: all 0.3s ease-in-out;
 }
+
+.about-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 14px 50px rgba(0, 0, 0, 0.5);
+}
+
 
 .about-section h2 {
-  color: #234a71;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  color: #333; 
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.about-section p {
-  font-size: 1.1rem;
+
+.about-section p, 
+.about-section ul li {
+  font-size: 1.5rem;
   color: #333;
+  line-height: 1.8;
+  font-weight: 500;
 }
+
 
 .about-section ul {
   list-style: none;
@@ -49,23 +87,29 @@
 }
 
 .about-section ul li {
-  font-size: 1.1rem;
-  color: #555;
-  padding: 8px 0;
+  padding: 16px 0;
+  border-bottom: 2px solid #333; 
+  transition: all 0.3s ease-in-out;
 }
 
-/* ✅ Responsive Fix */
+.about-section ul li:hover {
+  color: #333; 
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+
 @media (max-width: 768px) {
   .about-header h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 
   .about-section h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .about-section p,
   .about-section ul li {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }

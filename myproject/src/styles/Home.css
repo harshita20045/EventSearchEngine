@@ -1,7 +1,7 @@
 /* ✅ Home Container - Clean Layout */
 .home-container {
   padding: 40px 20px;
-  background-color: #f9fafb;
+  background: linear-gradient(to right, #d4f8c4, #a8e6cf);
 }
 
 /* 🎟️ Section Title */
@@ -61,7 +61,7 @@
 /* 📄 Event Details */
 .event-details h3 {
   font-size: 1.5rem;
-  color: #34495e;
+  color: #2e7d32;
   margin-top: 12px;
   margin-bottom: 8px;
   font-weight: bold;
@@ -75,7 +75,7 @@
 
 /* 🎟️ View Details Button */
 .btn-view {
-  background-color: #4a90e2;
+  background-color: #66bb6a;
   color: white;
   padding: 10px 18px;
   border: none;
@@ -87,7 +87,7 @@
 }
 
 .btn-view:hover {
-  background-color: #357abd;
+  background-color: #388e3c;
 }
 
 /* 📱 Responsive Design */

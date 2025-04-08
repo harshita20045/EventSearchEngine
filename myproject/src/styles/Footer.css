@@ -1,6 +1,6 @@
 /* ✅ Footer Container */
 .footer-container {
-  background: linear-gradient(to right, #2c3e50, #34495e); /* Same as Navbar */
+  background: linear-gradient(to right, #a8e6cf, #333); /* Light Green to Charcoal Black Gradient */
   color: white;
   padding: 50px 20px;
   text-align: center;
@@ -26,7 +26,7 @@
 
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #f1c40f; /* Highlight on hover */
+  color: #a8e6cf; /* Light Green on hover */
 }
 
 /* ✅ Footer Content */
@@ -47,7 +47,7 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #f1c40f; /* Golden Yellow */
+  color: #333; /* Charcoal Black */
 }
 
 .footer-section ul {
@@ -67,7 +67,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #f1c40f;
+  color: #a8e6cf; /* Light Green on hover */
   text-decoration: underline;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .footer-section p a:hover {
-  color: #f1c40f;
+  color: #a8e6cf; /* Light Green on hover */
 }
 
 /* ✅ Footer Bottom */

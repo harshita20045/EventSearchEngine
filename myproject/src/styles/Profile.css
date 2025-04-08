@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #2196f3, #0d47a1);
+  background: linear-gradient(to right, #a8e6cf, #333); /* Light Green to Charcoal Black Gradient */
 }
 
 /* 🎨 Profile Card */
@@ -21,14 +21,14 @@
 /* 🎯 Profile Heading */
 .profile-card h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: #333; /* Charcoal Black */
   font-size: 1.8rem;
 }
 
 /* 📄 Profile Info */
 .profile-info p {
   font-size: 1.1rem;
-  color: #555;
+  color: #333; /* Charcoal Black */
   margin-bottom: 12px;
 }
 
@@ -41,7 +41,7 @@
 
 /* ✅ Edit Button */
 .btn-edit {
-  background: #4caf50;
+  background: #333; /* Charcoal Black */
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -51,7 +51,7 @@
 
 /* ✅ Logout Button */
 .btn-logout {
-  background: #e74c3c;
+  background: #e74c3c; /* Retaining original color for logout */
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -61,10 +61,11 @@
 
 /* 🔥 Button Hover Effects */
 .btn-edit:hover {
-  background: #45a049;
+  background: #555; /* Darker Charcoal on hover */
 }
+
 .btn-logout:hover {
-  background: #c0392b;
+  background: #c0392b; /* Retaining original hover color */
 }
 
 /* 📱 Responsive Design */
