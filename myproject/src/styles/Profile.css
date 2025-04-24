@@ -3,74 +3,110 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(to right, #a8e6cf, #333); /* Light Green to Charcoal Black Gradient */
+  min-height: 100vh;
+  background: linear-gradient(to right, #a8e6cf, #333); /* Light Green to Charcoal Black */
+  padding: 20px;
 }
 
 /* 🎨 Profile Card */
 .profile-card {
   background: #fff;
-  padding: 30px;
+  padding: 30px 25px;
   width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   text-align: center;
+  animation: fadeIn 0.5s ease;
 }
 
 /* 🎯 Profile Heading */
 .profile-card h2 {
-  margin-bottom: 20px;
-  color: #333; /* Charcoal Black */
-  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /* 📄 Profile Info */
 .profile-info p {
   font-size: 1.1rem;
-  color: #333; /* Charcoal Black */
-  margin-bottom: 12px;
+  color: #444;
+  margin-bottom: 14px;
+  text-align: left;
 }
 
 /* ✨ Edit & Logout Buttons */
 .profile-actions {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-/* ✅ Edit Button */
-.btn-edit {
-  background: #333; /* Charcoal Black */
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-/* ✅ Logout Button */
+/* ✅ Button Base Style */
+.btn-edit,
 .btn-logout {
-  background: #e74c3c; /* Retaining original color for logout */
-  color: white;
+  flex: 1 1 48%;
   padding: 10px 16px;
   border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  border: none;
 }
 
-/* 🔥 Button Hover Effects */
+/* ✏️ Edit Button */
+.btn-edit {
+  background: #333;
+  color: white;
+}
+
 .btn-edit:hover {
-  background: #555; /* Darker Charcoal on hover */
+  background: #555;
+}
+
+/* 🚪 Logout Button */
+.btn-logout {
+  background: #e74c3c;
+  color: white;
 }
 
 .btn-logout:hover {
-  background: #c0392b; /* Retaining original hover color */
+  background: #c0392b;
 }
 
-/* 📱 Responsive Design */
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .profile-card {
-    width: 90%;
+    width: 100%;
+  }
+
+  .profile-info p {
+    text-align: center;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-edit,
+  .btn-logout {
+    width: 100%;
+  }
+}
+
+/* ✨ Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

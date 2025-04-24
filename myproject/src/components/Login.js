@@ -10,30 +10,36 @@ export default function Login() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  // ✅ Handle Login
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); // Reset error before checking
+    setError("");
 
-    // ✅ Admin Login is Separate
     if (role === "admin") {
       setError("⚠ Admin must login from /admin-login");
       return;
     }
 
-    // ✅ Fixed Test Credentials
     try {
-      const res = await axios.post("http://localhost:3001/user/login", { email, password, role });
+      const res = await axios.post("http://localhost:3001/user/login", {
+        email,
+        password,
+        role,
+      });
 
-      if (res.data.token) {
+      if (res.data.token && res.data.user) {
+        // ✅ Save complete user info
         localStorage.setItem("token", res.data.token);
-        localStorage.setItem("role", role);
+        localStorage.setItem("role", res.data.user.role);
+        localStorage.setItem("fullName", res.data.user.fullName);
+        localStorage.setItem("email", res.data.user.email);
+        
+
         alert("✅ Login successful!");
 
-        // ✅ Role-wise redirection
+        // ✅ Redirect by role
         if (role === "user") navigate("/home");
         else if (role === "organizer") navigate("/organizer");
-        else if (role === "admin") navigate("/admin-dashboard"); // Just in case
+        else if (role === "admin") navigate("/admin-dashboard");
       } else {
         setError("❌ Invalid credentials! Please try again.");
       }
@@ -47,7 +53,6 @@ export default function Login() {
       <div className="auth-box">
         <h2>🔑 Welcome Back!</h2>
         <form onSubmit={handleLogin}>
-          {/* ✅ Role Selection */}
           <div className="role-selector">
             <label>
               <input
@@ -71,7 +76,6 @@ export default function Login() {
             </label>
           </div>
 
-          {/* ✅ Email & Password */}
           <input
             type="email"
             placeholder="Email"
@@ -87,10 +91,8 @@ export default function Login() {
             required
           />
 
-          {/* ✅ Error Message */}
           {error && <p className="error-message">{error}</p>}
 
-          {/* ✅ Login Button */}
           <button className="btn-auth" type="submit">
             Login
           </button>

@@ -35,7 +35,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg custom-navbar">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            🎟 Event Search Engine
+            🎟 Eventista
           </Link>
 
           <button

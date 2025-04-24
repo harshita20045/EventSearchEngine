@@ -9,8 +9,8 @@ export default function AdminLogin() {
   const navigate = useNavigate();
 
   // ✅ Admin Credentials
-  const adminEmail = "harshita@gmail.com";
-  const adminPassword = "1234";
+  const adminEmail = ("harshita@gmail.com", "rashmi@gmail.com");
+  const adminPassword = ("1234", "rashmi1111");
 
   // 🎯 Handle Login
   const handleLogin = (e) => {

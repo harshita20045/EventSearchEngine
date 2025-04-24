@@ -67,7 +67,7 @@ export default function AddEvent() {
     <div className="add-event-container">
       <h1>{eventId ? "✏ Edit Event" : "📅 Add New Event"}</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Event Name" value={event.title} onChange={handleChange} required />
+        <input type="text" name="name" placeholder="Event Name" value={event.name} onChange={handleChange} required />
         <select name="category" value={event.category} onChange={handleChange} required>
     <option value="">Select a Category</option>
     <option value="Music">🎵 Music</option>

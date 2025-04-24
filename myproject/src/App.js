@@ -10,9 +10,13 @@ import EventsFeed from "./components/EventsFeed"; // ✅ Added EventsFeed Import
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Profile from "./components/Profile";
+import EditProfile from "./components/EditProfile";
 import AdminLogin from "./components/AdminLogin";
+import AdminProfile from "./components/Admin/AdminProfile";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import AddEvent from "./components/Admin/AddEvent";
+import AllEvents from "./components/Admin/AllEvents";
+import UserList from "./components/Admin/UserList";
 import OrganizerDashboard from "./components/Organizer/OrganizerDashboard";
 import EditEvent from "./components/Organizer/EditEvent"; // ✅ Added Edit Event
 
@@ -28,7 +32,7 @@ function App() {
 function MainLayout() {
   const location = useLocation();
   const hideNavbarAndFooter =
-    location.pathname.startsWith("/admin") || location.pathname.startsWith("/edit-event");
+    location.pathname.startsWith("/admin") || location.pathname.startsWith("/edit-event")
 
   return (
     <>
@@ -46,11 +50,15 @@ function MainLayout() {
         <Route path="/services" element={<Services />} />
         <Route path="/events" element={<EventsFeed />} /> {/* ✅ Added Route */}
         <Route path="/profile" element={<Profile />} />
+        <Route path ="/edit-profile" element={<EditProfile />} />
 
         {/* ✅ Admin Routes */}
         <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin/profile" element={<AdminProfile />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/add-event" element={<AddEvent />} />
+        <Route path="/admin/all-events" element={<AllEvents />} />
+        <Route path="/admin/users" element={<UserList />} />
 
         {/* ✅ Organizer Routes */}
         <Route path="/organizer" element={<OrganizerDashboard />} />

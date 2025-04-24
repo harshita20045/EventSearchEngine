@@ -33,11 +33,11 @@ export default function EventsFeed() {
         <div className="event-list">
           {events.map((event) => (
             <div key={event._id} className="event-card">
-              <img src={event.image || "https://via.placeholder.com/300"} alt={event.title || "Event"} className="event-image" />
+              <img src={event.image || "https://via.placeholder.com/300"} alt={event.name || "Event"} className="event-image" />
               <div className="event-details">
-                <h3>{event.title}</h3>
+                <h3>{event.name}</h3>
                 <p>{event.description}</p>
-                <p>📅 {event.date} | 🕓 {event.time}</p>
+                <p>📅 {event.date} | 🕓 {event.time} </p>
                 <p>📍 {event.location}</p>
                 {event.registrationForm && (
                   <a href={event.registrationForm} target="_blank" rel="noopener noreferrer" className="btn-register">

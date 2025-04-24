@@ -1,0 +1,75 @@
+.admin-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .admin-profile-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .admin-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-profile-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+  
+  .admin-profile-details {
+    margin-top: 20px;
+  }
+  
+  .profile-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .detail-value {
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .admin-profile-card {
+      padding: 20px;
+    }
+  
+    .admin-profile-header h2 {
+      font-size: 20px;
+    }
+  }
+  

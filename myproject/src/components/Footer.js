@@ -31,7 +31,7 @@ export default function Footer() {
       {/* 🔹 Footer Content & Links */}
       <div className="footer-content">
         <div className="footer-section">
-          <h4>🎟 Event Search Engine</h4>
+          <h4>🎟 Eventista</h4>
           <p>Discover and book amazing events near you!</p>
         </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
 
       {/* 🔹 Copyright Section */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Event Search Engine. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Eventista All Rights Reserved.</p>
       </div>
     </footer>
   );

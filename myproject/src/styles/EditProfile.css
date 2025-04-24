@@ -1,0 +1,83 @@
+/* 📄 Container for Edit Profile Page */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #a8e6cf, #333);
+    padding: 20px;
+  }
+  
+  /* 🎨 Edit Profile Card */
+  .profile-card {
+    background: #fff;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* 🎯 Heading */
+  .profile-card h2 {
+    margin-bottom: 24px;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  /* 🧾 Input Fields */
+  .profile-card input {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .profile-card input:focus {
+    border-color: #333;
+  }
+  
+  /* ✅ Submit Button */
+  .btn-edit {
+    background: #333;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .btn-edit:hover {
+    background: #555;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .profile-card {
+      width: 100%;
+    }
+  }
+  
+  /* ✨ Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

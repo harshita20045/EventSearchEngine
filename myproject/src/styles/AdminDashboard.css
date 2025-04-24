@@ -1,88 +1,130 @@
-/* ✅ Admin Dashboard Container */
 .admin-dashboard {
-  padding: 20px;
-  background: #ffffff; /* White background */
+  display: flex;
   min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, V  erdana, sans-serif;
+  background-color: #f0f2f5;
 }
 
-/* 📌 Dashboard Title */
-.admin-dashboard h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+.admin-sidebar {
+  width: 260px;
+  background: linear-gradient(135deg, #36144f, #3aab84);
+  color: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  display: block;
+  color: #f1f1f1;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: rgba(255, 253, 253, 0.279);
+  transform: translateX(5px);
+}
+
+.logout-btn {
+  background: #ff4d4f;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #d9363e;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
   color: #333;
 }
 
-/* ➕ Add Event Button */
-.btn-add-event {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-add-event:hover {
-  background-color: #388e3c;
-  transform: scale(1.05);
-}
-
-/* 🎟️ Event List Grid */
 .event-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
-/* 🎟️ Event Card */
 .event-card {
-  background: #f5f5f5; /* Light grey */
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  transition: transform 0.3s;
-  border: 2px solid #4caf50; /* Green border */
 }
 
 .event-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .event-card img {
   width: 100%;
-  height: 180px;
-  border-radius: 8px;
+  height: 170px;
   object-fit: cover;
-  border: 2px solid #4caf50; /* Green border around images */
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
-/* ✅ Button Group */
+.event-meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
 .btn-group {
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-/* ✏ Edit & 🗑 Delete Buttons */
-.edit-btn,
-.delete-btn {
+.edit-btn, .delete-btn {
   padding: 8px 12px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 14px;
+  transition: transform 0.2s;
 }
 
 .edit-btn {
-  background-color: #ffc107;
+  background-color: #ffcc00;
   color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
 }
 
 .delete-btn {
@@ -90,22 +132,14 @@
   color: white;
 }
 
-/* ✏ Edit Hover */
-.edit-btn:hover {
-  background-color: #ffa000;
-  transform: scale(1.1);
-}
-
-/* 🗑 Delete Hover */
 .delete-btn:hover {
   background-color: #e54b4f;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* ⚠️ No Events Message */
 .no-events {
+  font-size: 18px;
   text-align: center;
-  font-size: 1.2rem;
   color: #e74c3c;
-  margin-top: 20px;
+  margin-top: 40px;
 }
